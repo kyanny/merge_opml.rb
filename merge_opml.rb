@@ -11,6 +11,7 @@ end
 
 feeds = []
 Dir['*.xml', '*.opml'].each do |file|
+  $stderr.puts "Collecting feeds from #{file}..."
   feeds += get_feed(file)
 end
 
